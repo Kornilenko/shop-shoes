@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Children's shoes</title>
+  <link rel="stylesheet" href="\Shop sneakers\css\style.css">
+  <link rel="shortcut icon" href="\Shop sneakers\img\logo\ava.png">
+  <meta charset="UTF-8">
+</head>
+  <body>      
+    <div class="cart">
+  
+        <span class="cart-items-count"><a href="\Shop sneakers\basket\basket.html">0</a> </span><a href="\Shop sneakers\basket\basket.html"><img src="\Shop sneakers\img\basket\basket.svg" class="basket" ></a>
+    </div>
+
+    <div class="product-card">
+  <img src="\Shop sneakers\img\Sneakers\Child\child-sneakers-9.png" class="child-promo" alt="Shoe Image">
+  <h2>Child's Running Shoe</h2>
+  <p class="price">$89.99</p>
+  <ul class="details">
+
+    <li>Lightweight and breathable design</li>
+    <li>Responsive cushioning for comfort</li>
+    <li>Flexible sole for natural movement</li>
+    <li>Colors: White, Black, Pink and Yellow</li>
+  </ul>
+  <a href="\Shop sneakers\form\child\sneakers-form-for-child-9.html"><button class="buy-now-form">Buy Now</button></a>
+  <p class="choise-buy-add-to-card">or</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+
+<style>
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+  .product-card {
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+                  /*Цена Кроссовок*/
+.product-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+                  /*Описание Кроссовок*/
+.product-card .details {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.product-card .details li {
+  margin-bottom: 5px;
+
+  margin-top: 9px;
+}
+                    /*Редактирование кнопки - Добавить в Корзину*/
+.product-card .add-to-cart {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #0062cc;
+}
+                  /*Редактирование кнопки - Buy Now*/
+.product-card .buy-now-form {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+.product-card .buy-now-form:hover {
+  background-color: #0062cc;
+}
+                  /*Редактирование or */
+.choise-buy-add-to-card {}
+.cart-items-count {                      /* НАПРОЛНЕНИЕ КОРЗИНЫ */
+  text-overflow: hidden;
+  font-size: 1.9em;
+  margin: 1em;
+  color: #000;
+}
+.cart-items-count:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.basket {                         /*РАЗМЕР КОРЗИНЫ*/
+  width: 16%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*.basket, .cart-items-count {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+}*/
+                        /*РАСПОЛОЖЕНИЕ КОРЗИНЫ*/
+.cart {
+  position: absolute;
+  /*bottom: 0;*/
+  right: 0;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .cart {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .basket, .cart-items-count {
+    width: 70px;
+    height: 70px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .basket, .cart-items-count {
+    width: 50px;
+    height: 50px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+                        /*РАЗМЕР ФОТОГРАФИИ ОБУВИ*/
+.child-promo {
+  max-width: 300px;
+  max-height: auto;
+}
+</style>
+
+<!-- <div class="product-card">
+  <h2>Child's Running Shoe</h2>
+  <p class="price">$89.99</p>
+  <button class="add-to-cart">Add to Cart</button>
+</div> -->
+<script>
+const addToCartButton = document.querySelector('.add-to-cart');
+const cartItemsCount = document.querySelector('.cart-items-count');
+
+let cartItems = [];
+
+addToCartButton.addEventListener('click', function() {
+  cartItems.push('Child\'s Running Shoe');
+  cartItemsCount.textContent = cartItems.length;
+});
+
+</script>
+  </body>
+</html>
