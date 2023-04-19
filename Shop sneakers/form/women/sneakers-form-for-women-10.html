@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Заказать женские кроссовки</title>
+  <link rel="stylesheet" href="\Shop snikers\css\style.css">
+  <link rel="shortcut icon" href="\Shop sneakers\img\logo\ava.png">
+  <meta charset="UTF-8">
+</head>
+<style>
+  body {
+    background: #ffc8dd;
+  }
+</style>
+  <body>
+    <section class="product-form">
+      <div class="product-image">
+    <img src="\Shop sneakers\img\Sneakers\Women\women-sneakers-10.png" alt="Product Image">
+  </div>
+  <div class="product-info">
+
+  <h2>Купить ЖЕНСКИЕ кроссовки</h2>
+  <form action="submit.php" method="post">
+    <div class="form-group">
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Количество:</label>
+      <input type="number" id="quantity" name="quantity" required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Купить</button>
+    </div>
+  </form>
+</div>
+</section>
+<style>
+  .product-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #390099;
+  border: 1px solid #ccc;
+}
+.product-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .product-info {
+    flex: 2;
+    color: #cdc1ff;
+  }
+  .product-image img {
+    max-width: 100%;
+  }
+.product-form h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fb8b24;
+}
+
+.product-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-form .form-group {
+  margin-bottom: 20px;
+}
+
+.product-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-form input[type="text"],
+.product-form input[type="email"],
+.product-form input[type="tel"],
+.product-form input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f0f0f0;
+  background-color: #FF501A;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-form button[type="submit"]:hover {
+  background-color: #555;
+}
+.form-group {
+  color: #cdc1ff;
+}
+</style>
+
+  </body>
+</html>
