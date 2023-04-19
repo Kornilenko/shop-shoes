@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Шаг за шагом - магазин обуви</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #5B5B5B;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+margin: 0 1rem;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+}
+
+.logo {
+max-width: 200px;
+}
+.logo img {
+max-width: 100%;
+}
+.banner {
+background-image: url(banner.jpg);
+background-size: cover;
+background-position: center;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.banner h1 {
+color: #fff;
+font-size: 3rem;
+text-align: center;
+}
+
+.btn {
+background-color: #007bff;
+color: #fff;
+padding: 1rem 2rem;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.btn:hover {
+background-color: #0069d9;
+cursor: pointer;
+}
+
+.products {
+display: flex;
+flex-wrap: wrap;
+padding: 2rem;
+/*background: #FFFFFF;*/
+}
+
+.product-item {
+flex-basis: 20%;
+margin: 1rem;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+border-radius: 12px;
+overflow: hidden;
+background: #FFFFFF;
+}
+
+.product-item img {
+max-width: 100%;
+}
+
+.product-item h3 {
+font-size: 1.2rem;
+margin: 0.5rem;
+}
+section.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.product-item {
+  flex-basis: calc(20% - 20px);
+  /*margin-bottom: 40px;*/
+}
+.price {
+font-size: 1.2rem;
+margin: 0.5rem;
+color: #007bff;
+/*background: #FFFFFF;*/
+}
+.new-post {
+  color: #f0f0f0;
+  /*border: dotted 0.3em;*/
+  margin: 3px;
+}
+footer {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+text-align: center;
+text-decoration: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #0C0B0B;
+}
+
+.cart {
+  flex: 0 0 auto;
+}
+
+.cart a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.cart i {
+  margin-right: 0.5rem;
+}
+/* стили для одиночного блока товаров на маленьких экранах */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* стили для desktop-версии */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-nav-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-nav-elements ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-nav-elements li {
+  margin: 0 10px;
+}
+
+.header-nav-elements a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.search-box input[type="text"] {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.search-box button[type="submit"] {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.basket-home {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.word-basket {
+  font-size: 14px;
+}
+
+/* стили для mobile-версии */
+@media screen and (max-width: 768px) {
+  .header-nav {
+    height: auto;
+  }
+
+  .header-nav-elements {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-button {
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .header-nav-elements-mobile {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+    background-color: #fff;
+  }
+
+  .nav-mobile.active {
+    display: block;
+  }
+
+  .nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .nav-mobile li {
+    margin: 10px 0;
+  }
+
+  .nav-mobile a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .logo img {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+                        /* RIGHT SIDEBAR */
+
+  </style>
+  <header>
+  
+  <nav class="header-nav nav-desktop">
+           <div class="header-nav-elements default-container">
+             <ul>
+              <li>
+                <div class="logo">
+                <a href="#"><img src="img/logo/logo.png" alt="Логотип"></a>
+                </div>
+              <div class="search-box">
+                  <form action="#" method="get">
+                    <input type="text" name="search" placeholder="Поиск...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </li>
+             </ul>
+             <ul>
+      <li><a href="header\home\index.html">Главная</a></li>
+      <li><a href="header\catalog\index.html">Каталог</a></li>
+      <li><a href="header\about as\index.html">О нас</a></li>
+      <li><a href="header\contact\index.html">Контакты</a></li>
+    </ul>
+    <div class="cart">
+    <a href="\Shop sneakers\basket\basket.html"><img src="\Shop sneakers\img\basket\basket.svg" class="basket-home" alt="Basket"><i class="fa fa-shopping-cart"></i><span class="word-basket"> Корзина (0)</span></a>
+  </div>
+           </div>
+      </nav>
+         <nav class="nav-mobile">
+           <div class="header-nav-elements-mobile">
+             <ul>
+              <li class="mobile-button">
+                <img src="img/social/menu.svg" alt="">
+              </li>
+              <li>
+                <div class="logo">
+                <a href="#"><img src="\Shop sneakers\img\Menu\menu.svg"></a>
+                </div>
+              </li>
+             </ul><ul>
+      <li><a href="header\home\index.html">Главная</a></li>
+      <li><a href="header\catalog\index.html">Каталог</a></li>
+      <li><a href="header\about as\index.html">О нас</a></li>
+      <li><a href="header\contact\index.html">Контакты</a></li>
+    </ul>
+  </div>
+  <div class="cart">
+    <a href="\Shop sneakers\basket\basket.html"><img src="\Shop sneakers\img\basket\basket.svg" class="basket-home" alt="Basket"><i class="fa fa-shopping-cart"></i><span class="word-basket"> Корзина (0)</span></a>
+  </div>
+      </nav>
+</header>
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span class="open-nav" onclick="openNav()"><img src="\Shop sneakers\img\Menu\menu.svg" class="svg"></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  
+
+</div>
+
+
+
+  <main>
+    <section class="banner default-container">
+      <h1>Купите стильную обувь уже сегодня</h1>
+      <a href="#" class="btn btn-primary">Buy now</a>
+    </section>
+    <section class="products">
+
+      <h2 class="new-post">Новые поступления</h2>
+      <div class="posters-now">
+      <div class="product-item">
+        <a href="#"><img src="\Shop sneakers\img\Sneakers\Child\child-sneakers-1.png" class="max-width-photo" alt="Детские кеды"></a>
+        <h3>Детские кеды</h3>
+        <p class="price">$1500.</p>
+        <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+      <div class="product-item">
+        <a href="#"><img src="\Shop sneakers\img\Sneakers\Women\women-sneakers-1.png" class="max-width-photo" alt="Женские кроссовки"></a>
+        <h3>Женские кроссовки</h3>
+        <p class="price">$3500.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <a href="#"><img src="\Shop sneakers\img\Sneakers\Men\men-sneakers-1.png" class="max-width-photo" alt="Мужские ботинки"></a>
+        <h3>Мужские ботинки</h3>
+        <p class="price">$5000.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      </div>
+    </section>
+  </main>
+
+<hr>
+
+<main>
+    <section class="products default-container">
+      <h2 class="new-post">Новые акции</h2>
+      <div class="posters-now">
+<!-- ДЕТСКИЕ КРОССОВКИ -->
+      <div class="product-item">
+        <a href="\Shop sneakers\form\child\sneakers-form.html">
+            <img src="\Shop sneakers\img\Sneakers\Promotion\Child\promotion-sneakers-1.png" class="max-width-photo" alt="Детские кроссовки"></a>
+        <h3>
+            <a href="product card\child\product-card-for-child.html" class="transition">Детские кроссовки</a>
+        </h3>
+        <p class="price">$89.99.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <a href="\Shop sneakers\form\child\sneakers-form.html">
+            <img src="\Shop sneakers\img\Sneakers\Promotion\Child\promotion-sneakers-2.png" class="max-width-photo" alt="Детские кроссовки"></a>
+        <h3>
+            <a href="product card\child\product-card-for-child.html" class="transition">Детские кроссовки</a>
+        </h3>
+        <p class="price">$89.99.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+<!-- ЖЕНСКИЕ КРОССОВКИ -->
+      <div class="product-item">
+        <a href="\Shop sneakers\product card\women\product-card-for-woman-1.html" class="transition">
+            <img src="\Shop sneakers\img\Sneakers\Promotion\Women\promotion-sneakers-1.png" class="max-width-photo" alt="Женские кроссовки"></a>
+        <h3>
+            <a href="\Shop sneakers\product card\women\product-card-for-woman-1.html" class="transition">Женские кроссовки</a>
+        </h3>
+        <p class="price">$89.99.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+<!-- МУЖСКИЕ КРОССОВКИ -->
+      <div class="product-item">
+        <a href="product card\men\product-card-for-man.html" class="transition"><img src="\Shop sneakers\img\Sneakers\Promotion\Men\Promotion-sneakers-1.png" class="max-width-photo" alt="Мужские кроссовки"></a>
+        <h3><a href="\Shop sneakers\form\men\sneakers-form.html" class="transition">Мужские кроссовки</a></h3>
+        <p class="price">$99.99.</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      </div>
+    </section>
+  </main>
+
+                <!-- ПАГИНАЦИЯ -->
+<div class="pagination">
+      <a href="main7.html">&laquo;</a>
+      <a class="active" href="main1.html">1</a>
+      <a href="main2.html">2</a>
+      <a href="main3.html">3</a>
+      <a href="main4.html">4</a>
+      <a href="main5.html">5</a>
+      <a href="main6.html">6</a>
+      <a href="main1.html">&raquo;</a>
+    </div>
+<style>
+    .pagination {
+        margin: 10px;
+    }
+    .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+
+}
+
+/* Style the active/current link */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: #000000;
+}
+</style>
+  <footer>
+      <div class="footer-wrapper default-container">
+
+        <div class="foot-item">
+          <p>Main Link</p>
+          <ul>
+              <li>Movies</li>
+              <li>SHOWS</li>
+              <li>LIVE TV</li>
+          </ul>
+        </div>
+          <div class="foot-item">
+            <p>Other Page</p>
+            <ul>
+              <li>About US</li>
+            </ul>
+          </div>
+            <div class="foot-item">
+              <p>Accademy</p>
+
+              <ul>
+                <li>Our Courses</li>
+              </ul>
+            </div>
+      </div>
+      <div class="footer-social default-container">Follow us via social media:
+       <a href="https://www.youtube.com/channel/UC28uyAk_I-8F_1G3ffd2bQQ"><img src="img/social/social.png" alt="YouTUbe"></a>
+       <a href="https://www.instagram.com/pandochka_and_master/"><img src="img/social/social1.png" alt="Instagram"></a>
+       <a href="https://www.tiktok.com/pandochka_and_master/"><img src="img/social/social3.png" alt="TikTok"></a>
+       <a href="https://www.twitter.com/PANDOLIKP"><img src="img\icons\icon-twitter.svg" alt="Twitter"></a>
+       <a href="https://vk.com/tolik.kornilenko/"><img src="img/social/social6.png" alt="VK"></a>
+       <a href="mailto: kornilenkotolik7@gmail.com"><img src="img/social/socialgoogle.png" alt="E-Mail"></a>
+      </div>
+      <div class="footer-copyright">
+        <div class="default-container">
+          &copy;2023. <span>Автор проекта: Kornilenko Anatoliy</span>
+        </div>
+      </div>
+    </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pagination.js"></script>
+  <script>
+const addToCartButton = document.querySelector('.add-to-cart');
+const cartItemsCount = document.querySelector('.word-basket');
+
+let cartItems = [];
+
+addToCartButton.addEventListener('click', function() {
+  cartItems.push('All\'s Running Shoe');
+  cartItemsCount.textContent = cartItems.length;
+});
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    const sidebar = document.querySelector(".sidebar");
+    const toggleBtn = document.querySelector(".sidebar-toggle");
+
+    toggleBtn.addEventListener("click", function() {
+    sidebar.classList.toggle("show"); /* добавляем/удаляем  класс show при клике на кнопку */
+});
+  </script> -->
